@@ -32,7 +32,6 @@ public function update($id, Request $request){
 
     public function store(Request $request){
         $data = $request->all();
-        $data['pesquisador_id'] = 2;  //TODO receber dinâmicamente
         dd(Publicacao::create($data));
 
     }
