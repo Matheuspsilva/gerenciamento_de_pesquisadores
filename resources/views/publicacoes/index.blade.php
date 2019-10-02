@@ -14,8 +14,11 @@
                 <th>Id </th>
                 <th>Título </th>
                 <th>Periódico</th>
-                <th>issn</th>
-                <th>ano</th>
+                <th>Pesquisador</th>
+                <th>Issn</th>
+                <th>Ano</th>
+                <th>Ação</th>
+
             </tr>
         </thead>
         <tbody>
@@ -24,6 +27,8 @@
                         <td>{{$publicacao->id}}</td>
                         <td>{{$publicacao->titulo}}</td>
                         <td>{{$publicacao->periodico}}</td>
+                        <td>{{$publicacao->pesquisador_id}}</td>
+                        <td>{{$publicacao->issn}}</td>
                     <td>{{date('d/m/Y H:i:s', strtotime($publicacao->created_at))}}</td>
                     <td>
                         <div class="btn-group">
