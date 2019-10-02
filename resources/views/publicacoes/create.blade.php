@@ -11,10 +11,10 @@
     <input type="text" name="titulo" class="form-control" value="{{old('titulo')}}">
     </div>
 
-    {{-- <div class="form-group">
+    <div class="form-group">
             <label for="">Id Pesquisador</label>
             <input type="text" name="pesquisador_id" class="form-control" value="{{old('pesquisador_id')}}">
-    </div> --}}
+    </div>
 
     <div class="form-group">
         <label for="">periodico</label>
