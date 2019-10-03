@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Pesquisador;
+use App\Http\Requests\PesquisadorRequest;
 use Illuminate\Http\Request;
+
 
 class PesquisadorController extends Controller
 {
@@ -22,12 +24,12 @@ class PesquisadorController extends Controller
         return view('pesquisadores.create');
     }
 
-    public function store(Request $request){
+    public function store(PesquisadorRequest $request){
         $data = $request->all();
         dd(Pesquisador::create($data));
     }
 
-    public function update($id, Request $request){
+    public function update($id, PesquisadorRequest $request){
         $data = $request->all();
         $pesquisador = Pesquisador::findOrFail($id);
         dd($pesquisador->update($data));

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Publicacao;
 use Illuminate\Http\Request;
+use App\Http\Requests\PublicacaoRequest;
 
 class PublicacaoController extends Controller
 {
@@ -19,9 +20,8 @@ class PublicacaoController extends Controller
         return view('publicacoes.edit', compact('publicacoes'));
     }
 
-public function update($id, Request $request){
+public function update($id, PublicacaoRequest $request){
     $data = $request->all();
-
     $publicacao = Publicacao::findOrFail($id);
     dd($publicacao->update($data));
 }
@@ -30,7 +30,7 @@ public function update($id, Request $request){
         return view('publicacoes.create');
     }
 
-    public function store(Request $request){
+    public function store(PublicacaoRequest $request){
         $data = $request->all();
         dd(Publicacao::create($data));
 
