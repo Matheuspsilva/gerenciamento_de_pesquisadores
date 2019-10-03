@@ -13,4 +13,9 @@ class Pesquisador extends Model
         'area_formacao',
         'link_lattes'
     ];
+
+    public function publicacoes()
+    {
+        return $this->hasMany('App\Publicacao');
+    }
 }

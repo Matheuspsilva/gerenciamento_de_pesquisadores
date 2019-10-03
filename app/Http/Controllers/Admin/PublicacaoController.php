@@ -10,7 +10,7 @@ class PublicacaoController extends Controller
 {
 
     public function index(){
-        $publicacoes = Publicacao::paginate(15);
+        $publicacoes = Publicacao::with('pesquisador')->paginate(15);
         return view('publicacoes.index', compact('publicacoes'));
     }
 

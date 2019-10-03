@@ -14,4 +14,10 @@ class Publicacao extends Model
         'issn',
         'ano'
     ];
+
+    public function pesquisador()
+    {
+        return $this->belongsTo('App\Pesquisador');
+    }
+
 }

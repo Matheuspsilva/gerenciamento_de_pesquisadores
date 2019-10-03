@@ -16,6 +16,7 @@
                 <th>Periódico</th>
                 <th>Pesquisador</th>
                 <th>Issn</th>
+                <th>Criado em</th>
                 <th>Ano</th>
                 <th>Ação</th>
 
@@ -27,9 +28,10 @@
                         <td>{{$publicacao->id}}</td>
                         <td>{{$publicacao->titulo}}</td>
                         <td>{{$publicacao->periodico}}</td>
-                        <td>{{$publicacao->pesquisador_id}}</td>
+                        <td>{{$publicacao->pesquisador->nome}}</td>
                         <td>{{$publicacao->issn}}</td>
                     <td>{{date('d/m/Y H:i:s', strtotime($publicacao->created_at))}}</td>
+                    <td>{{$publicacao->ano}}</td>
                     <td>
                         <div class="btn-group">
                             <a href="{{route('publicacoes.show',  $publicacao->id)}}" class="btn btn-sm btn-primary">Editar</a>
